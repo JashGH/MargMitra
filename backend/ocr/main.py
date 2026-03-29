@@ -14,7 +14,7 @@ app = FastAPI()
     summary="Extract text from an uploaded image",
     response_description="Recognized OCR text",
 )
-async def ocr(image: UploadFile = File(..., description="Image file to process")) -> dict[str, str]:
+async def ocr(image: UploadFile = File(..., description="Image file to process")) -> dict:
     try:
         if image.content_type and not image.content_type.startswith("image/"):
             raise HTTPException(status_code=400, detail="Only image uploads are supported.")

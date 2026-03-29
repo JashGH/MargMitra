@@ -5,6 +5,7 @@ Handles SQLite storage for all scan results.
 
 import sqlite3
 from datetime import datetime
+from typing import Optional
 
 DB_PATH = "margmitra.db"
 
@@ -57,7 +58,7 @@ def get_all_scans() -> list[dict]:
     return rows
 
 
-def get_scan_by_id(scan_id: int) -> dict | None:
+def get_scan_by_id(scan_id: int) -> Optional[dict]:
     """Return a single scan by ID, or None if not found."""
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
