@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="theme-color" content="#a855f7" />
+    <title>MargMitra — Street Sign Transliterator</title>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ── Header ──────────────────────────────────────────────────────────── -->
+    <header>
+        <div class="header-top">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="ph ph-map-trifold"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>MargMitra</h1>
+                    <span>Street Sign Transliterator</span>
+                </div>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i id="theme-icon" class="ph ph-moon"></i>
+            </button>
+        </div>
+        <!-- Language selector is injected here by script.js -->
+    </header>
+
+    <!-- ── Main Content ─────────────────────────────────────────────────────── -->
+    <main>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <h3>0</h3>
+                <p>Total Scans</p>
+            </div>
+            <div class="stat-box">
+                <h3>0</h3>
+                <p>Languages Used</p>
+            </div>
+        </div>
+
+        <!-- Action Cards -->
+        <p class="section-title">Scan a Sign</p>
+        <div class="actions-grid">
+            <!-- First card — click triggers file upload (attached by script.js) -->
+            <div class="action-card">
+                <div class="card-icon">
+                    <i class="ph ph-image"></i>
+                </div>
+                <h3>Upload Photo</h3>
+                <p>Pick from your gallery</p>
+            </div>
+
+            <!-- Second card — opens live camera -->
+            <div class="action-card" id="open-scan-btn">
+                <div class="card-icon">
+                    <i class="ph ph-camera"></i>
+                </div>
+                <h3>Take Photo</h3>
+                <p>Use your camera live</p>
+            </div>
+        </div>
+
+        <!-- Recent Scans -->
+        <div class="recent-section">
+            <div class="section-header">
+                <p class="section-title">Recent Scans</p>
+            </div>
+            <!-- History items are injected here by script.js -->
+            <div class="empty-history">
+                <i class="ph ph-clock-clockwise"></i>
+                Scan a sign to see your history here.
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ── Floating Action Button ────────────────────────────────────────── -->
+    <button id="fab-scan" aria-label="Scan a sign">
+        <i class="ph ph-camera"></i>
+    </button>
+
+    <!-- ── Camera Overlay ───────────────────────────────────────────────── -->
+    <div id="camera-overlay" class="hidden">
+        <video id="webcam" autoplay playsinline muted></video>
+
+        <div class="camera-ui">
+            <div class="camera-header">
+                <button id="close-camera" aria-label="Close camera">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <!-- Viewfinder frame -->
+            <div class="scan-frame"><span></span></div>
+
+            <div class="camera-footer">
+                <p class="camera-hint">Point at a street sign</p>
+                <button id="shutter-btn" aria-label="Capture">
+                    <div class="shutter-inner"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Script ───────────────────────────────────────────────────────── -->
+    <script src="script.js"></script>
+</body>
+</html>
