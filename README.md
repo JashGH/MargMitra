@@ -92,11 +92,12 @@ Interactive docs: **http://localhost:8000/docs**
 
 | Member | Role | Files |
 |--------|------|-------|
-| [Name] | Frontend UI | `frontend/index.html`, `frontend/style.css` |
-| [Name] | Frontend Logic | `frontend/script.js` |
-| [Name] | OCR Service | `backend/ocr/main.py` |
-| [Name] | Transliteration Service | `backend/translit/main.py` |
-| [Your Name] | Main API + Database | `backend/main.py`, `backend/database.py` |
+| Jashwin Sharma | Main API + Database | `backend/main.py`, `backend/database.py` |
+| Atharva | Transliteration Service | `backend/translit/main.py` |
+| Harshita Suchak | Frontend UI | `frontend/index.html`, `frontend/style.css` |
+| Sneha | Frontend Logic | `frontend/script.js` |
+| Keshav | OCR Service | `backend/ocr/main.py` |
+
 
 ---
 
