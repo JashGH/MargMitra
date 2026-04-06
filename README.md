@@ -9,8 +9,8 @@
 margmitra/
 │
 ├── frontend/
-│   ├── index.html        ← Main app UI (your teammate's work)
-│   ├── style.css         ← Styles (your teammate's work)
+│   ├── index.html        ← Main app UI 
+│   ├── style.css         ← Styles 
 │   └── script.js         ← Frontend logic + API calls (updated)
 │
 ├── backend/
